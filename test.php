@@ -1,15 +1,31 @@
-<?php
 
-$file = $_SERVER['PHP_SELF'];
-$user = $_SERVER['HTTP_USER_AGENT'];
-$address = $_SERVER['REMOTE_ADDR'];
-$myString = 'http://mysite.com';
-/*
-$n = 5678763;
-$n = number_format($n);
-echo($n);
-define('USERNAME', $user);
-echo "hello, " .USERNAME;
-*/
-printf("The US has %d states and %d territories", 50,10);
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fullname'];
+  $email = $_POST['email'];
+  $employment = $_POST['employment'];
+  $age = $_POST['age'];
+  
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
 ?>
+<!doctype html>
+<html>
+    <head>
+        <title>My Loan</title>
+</head>
+<body>
+    <main>
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+              Name: <input type="text" name="fname">
+              <input type="submit">
+            </form>
+    </main>
+</body>
+
+</html>
