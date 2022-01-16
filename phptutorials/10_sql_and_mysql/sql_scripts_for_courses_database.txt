@@ -1,0 +1,228 @@
+CREATE TABLE IF NOT EXISTS Person (
+	PersonID int NOT NULL AUTO_INCREMENT,
+	LastName varchar(50) NOT NULL,
+	FirstName varchar(50) NOT NULL,
+	HireDate datetime NULL,
+	EnrolmentDate datetime NULL,	
+PRIMARY KEY (PersonID)
+);
+
+CREATE TABLE IF NOT EXISTS StudentGrade (
+	EnrolmentID int NOT NULL AUTO_INCREMENT,
+	CourseID int NOT NULL,
+	StudentID int NOT NULL,
+	Grade decimal (3, 2) NULL,
+PRIMARY KEY (EnrolmentID)
+);
+
+CREATE TABLE IF NOT EXISTS Course (
+	CourseID int NOT NULL,
+	Title varchar(100) NOT NULL,
+	Credits int NOT NULL,
+	DepartmentID int NOT NULL,
+PRIMARY KEY (CourseID)
+);
+
+CREATE TABLE IF NOT EXISTS Department (
+	DepartmentID int NOT NULL,
+	Name varchar(50) NOT NULL,
+	Budget DECIMAL(8,2) NOT NULL,
+	StartDate Datetime NOT NULL,
+	Administrator int NULL,
+PRIMARY KEY (DepartmentID)
+);
+
+
+
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (1, 'Taylor', 'Kim', '1995-03-11', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (2, 'Turings', 'Guy', null, '2005-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (3, 'Jacks', 'Susan', null, '2001-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (4, 'Turner', 'Matt', '2002-08-06', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (5, 'Kemp', 'Roger', '1998-07-01', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (6, 'Jefferson', 'James', null, '2002-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (7, 'Norman', 'Laura', null, '2003-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (8, 'Lee', 'Joeanne', null, '2005-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (9, 'Smith', 'Paul', null, '2005-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (10, 'Butcher', 'Peter', null, '2002-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (11, 'Hill', 'Sophia', null, '2004-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (12, 'Browning', 'Paul', null, '2000-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (13, 'Archer', 'Andrew', null, '2003-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (14, 'Burton', 'Alex', null, '2000-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (15, 'Lewis', 'Phill', null, '2004-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (16, 'Granger', 'John', null, '2001-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (17, 'Carlson', 'Robin', null, '2005-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (18, 'Carpenter', 'Roger', '2004-02-12', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (19, 'Gammon', 'Brian', null, '2001-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (20, 'Price', 'Marjie', null, '2004-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (21, 'Holt', 'Chris', null, '2004-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (22, 'Alexander', 'Allan', null, '2005-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (23, 'Morgan', 'Gary', null, '2001-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (24, 'Martin', 'Geoff', null, '2005-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (25, 'Thompson', 'Pauline', '2001-01-15', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (26, 'Rogers', 'Paula', null, '2002-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (27, 'Redcliff', 'Stacy', '1999-06-01', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (28, 'White', 'Pete', null, '2001-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (29, 'Griffin', 'Donna', null, '2004-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (30, 'Taylor', 'Claire', null, '2003-09-01');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (31, 'Stewart', 'Jack', '1997-10-12', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (32, 'Campbell', 'Amanda', '2001-7-23', null);
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (33, 'Russell', 'Eric', null, '2003-01-30');
+INSERT INTO Person (PersonID, LastName, FirstName, HireDate, EnrolmentDate)
+VALUES (34, 'Clark', 'Roger', '2000-12-07', null);
+
+
+
+
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2021, 2, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2030, 2, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2021, 3, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2030, 3, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2021, 6, 2.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2042, 6, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2021, 7, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2042, 7, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2021, 8, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (2042, 8, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4041, 9, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4041, 10, null);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4041, 11, 2.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4041, 12, null);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4061, 12, null);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 14, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 13, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4061, 13, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4041, 14, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 15, 2.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 16, 2);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 17, null);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 19, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4061, 20, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4061, 21, 2);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 22, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4041, 22, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4061, 22, 2.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (4022, 23, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1045, 23, 1.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1061, 24, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1061, 25, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1050, 26, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1061, 26, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1061, 27, 3);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1045, 28, 2.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1050, 28, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1061, 29, 4);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1050, 30, 3.5);
+INSERT INTO StudentGrade (CourseID, StudentID, Grade)
+VALUES (1061, 30, 4);
+
+
+
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (1050, 'Chemistry', 4, 1);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (1061, 'Physics', 4, 1);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (1045, 'Calculus', 4, 7);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (2030, 'Poetry', 2, 2);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (2021, 'Composition', 3, 2);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (2042, 'Literature', 4, 2);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (4022, 'Microeconomics', 3, 4);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (4041, 'Macroeconomics', 3, 4);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (4061, 'Quantitative', 2, 4);
+INSERT INTO Course (CourseID, Title, Credits, DepartmentID)
+VALUES (3141, 'Trigonometry', 4, 7);
+
+
+
+INSERT INTO Department (DepartmentID, Name, Budget, StartDate, Administrator)
+VALUES (1, 'Engineering', 350000.00, '2010-08-01', 2);
+INSERT INTO Department (DepartmentID, Name, Budget, StartDate, Administrator)
+VALUES (2, 'English', 120000.00, '2012-08-08', 6);
+INSERT INTO Department (DepartmentID, Name, Budget, StartDate, Administrator)
+VALUES (4, 'Economics', 200000.00, '2007-09-01', 4);
+INSERT INTO Department (DepartmentID, Name, Budget, StartDate, Administrator)
+VALUES (7, 'Mathematics', 250000.00, '2011-10-05', 3);
+
+
+
+
+
+

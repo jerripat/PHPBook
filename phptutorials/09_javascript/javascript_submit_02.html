@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset=utf-8" />
+<title>Submit a form using Javascript with input validation</title>
+
+	<script language="javascript" type="text/javascript">	
+	//--------------------------------------------
+	//Javascript that will submit the form when all entries are valid
+	function button_onclick(frmCreate) {
+	
+		var themessage = "Error in entries : ";
+		var isOK = true;
+
+		if ( frmCreate.txtItem_Number.value == "" ) {
+			themessage = themessage + "\n" + "* Enter PayPal item code";
+			isOK = false;
+		}
+
+		if ( frmCreate.txtItem_Name.value == "" ) {
+			themessage = themessage + "\n" + "* Enter PayPal item name";
+			isOK = false;
+		}
+
+
+		if ( isOK == false ) {
+			window.alert(themessage);
+		} else {
+			frmCreate.submit(frmCreate);
+		}
+
+	}
+
+	//--------------------------------------------
+	//Checks if the entry is numeric
+	function isNumeric(inputVal) {
+		numeric = true;
+		inputStr = inputVal.toString();
+		for (var i = 0; i< inputStr.length; i++) {
+			var oneChar = inputStr.charAt(i);
+
+			if (oneChar < "0" || oneChar > "9") {
+				return false;
+			}		
+
+		}
+
+		if (numeric == false) {
+			return false; }
+			else {
+			return true; }
+
+	}
+
+	//--------------------------------------------		
+	function LowerLimit_onblur(frmCreate) {
+		if ( !isNumeric( frmCreate.txtLowerLimit.value ) ) {
+			window.alert("Enter a integer number");
+			frmCreate.txtLowerLimit.value = "";
+			frmCreate.txtLowerLimit.focus();
+		}
+	}
+
+	</script>
+
+</head>
+<body>
+
+<h1>Chapter 9 Javascript - JavaScript Submit</h1>	
+
+<!-- START OF MAIN FORM -->
+<form name="frmCreate" method="post" action="test.html">
+		
+<input type="button" name="Create" value="Create" language="javascript" onClick="return button_onclick(frmCreate)" />
+
+<br/><br/>
+<table>
+<tr>
+<td>
+	<strong>Product Item Reference</strong>
+</td>
+
+<td>
+	<input type="text" name="txtItem_Number" />
+</td>
+</tr>
+
+<tr>
+<td>
+	<strong>Product Item Name</strong>
+</td>
+
+<td>
+	<input type="text" name="txtItem_Name" size="50" /><br/>
+</td>
+</tr>
+
+<tr>
+<td>
+	<strong>Enter lower limit</strong>
+</td>
+<td>
+	<input type="text" name="txtLowerLimit" class="inputbox"  value="5" size="3"  LANGUAGE="javascript" onBlur="return LowerLimit_onblur(frmCreate)" />
+</td>
+</tr>
+</table>
+</form>
+<!-- END OF MAIN FORM -->
+	
+
+</body>
+</html>

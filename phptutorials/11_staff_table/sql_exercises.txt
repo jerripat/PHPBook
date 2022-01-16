@@ -1,0 +1,32 @@
+
+SQL Exercises based on the staff table
+======================================
+
+SQL statement based on the staff table :
+
+(1) Display all staff with a beatles.com email address from the staff table.  This will require the use of the LIKE statement.
+
+(2) Count the staff with an authors.com email address from the staff table.  You may need to look up on the internet the use of the COUNT statement as used in SQL.
+
+(3) Dislay the staff who have a registration_date before the start of the year 2000
+
+(4) Display the staff who have a registration date between the start of the year 2001 and the end of the year 2008.  You may need to look up on the internet the use of the BETWEEN statement as used in SQL.
+
+
+SQL Exercises based on the Person, Student Grade and Course tables
+==================================================================
+
+SQL statements based on the courses tables
+
+(1) Display all the courses from the course table that have credits of 4
+
+(2) Display all the courses from the course table that have credits of either 3, 4 or 5.  This will require the use of the IN statement which you will need to look up on the internet.
+
+(3) Display the department name from the department table with a budget greater than 20000
+
+(4) Display the course title that each department is running.  You will need to combine the two tables together using an INNER JOIN which you may want to look up on the internet.
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset=utf-8" />
+<title>Submit a form using Javascript</title>
+
+	<script language="javascript" type="text/javascript">
+	//--------------------------------------------
+	//Javascript that will submit the form when all entries are valid
+	function button_onclick(frmCreate) {
+	
+		var themessage = "Error in entries : ";
+		var isOK = true;
+
+		if ( frmCreate.txtItem_Number.value == "" ) {
+			themessage = themessage + "\n" + "* Enter PayPal item code";
+			isOK = false;
+		}
+
+		if ( frmCreate.txtItem_Name.value == "" ) {
+			themessage = themessage + "\n" + "* Enter PayPal item name";
+			isOK = false;
+		}
+
+
+		if ( isOK == false ) {
+			window.alert(themessage);
+		} else {
+			frmCreate.submit(frmCreate);
+		}
+
+	}
+	</script>
+
+</head>
+<body>
+
+<h1>Chapter 9 Javascript - JavaScript Submit</h1>
+
+<!-- START OF MAIN FORM -->
+<form name="frmCreate" method="post" action="test.html">
+		
+
+<input type="button" name="Create" value="Create" language="javascript" onClick="return button_onclick(frmCreate)" />
+
+<br/><br/>
+<table>
+<tr>
+<td>
+	<strong>Product Item Reference</strong>
+</td>
+
+<td>
+	<input type="text" name="txtItem_Number" />
+</td>
+</tr>
+
+<tr>
+<td>
+	<strong>Product Item Name</strong>
+</td>
+
+<td>
+	<input type="text" name="txtItem_Name" size="50" /><br/>
+</td>
+</tr>
+</table>
+</form>
+<!-- END OF MAIN FORM -->
+	
+
+</body>
+</html>

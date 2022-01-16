@@ -1,0 +1,25 @@
+
+
+Exercise 10.4
+
+(1) From the person table, display all the persons with a first name of roger:
+
+SELECT lastname FROM person  WHERE firstname = 'roger'
+
+
+(2) From the person table, display all the persons with an enrolment date greater than 2003-12-01
+
+SELECT lastname FROM person  WHERE enrollmentdate > '2003-12-01'
+
+NOTE : with dates the best way to represent dates in php and storing them in database is to use the format of  yyyy-mm-dd  This format is a universal format.
+
+
+(3) From the person table display all the persons with no hirehdate
+
+SELECT * FROM person WHERE hiredate IS NOT NULL;
+
+
+(4) From the person table display all the persons whose last name starts with a letter a
+
+SELECT * FROM person WHERE `lastname` LIKE 'a%'
+

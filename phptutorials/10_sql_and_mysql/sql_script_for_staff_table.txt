@@ -1,0 +1,53 @@
+CREATE TABLE IF NOT EXISTS staff (
+recid MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+loginid VARCHAR(6) NULL,
+first_name VARCHAR(15) NULL,
+last_name VARCHAR(30) NULL,
+email VARCHAR(40) NULL,
+start_date DATE NULL,
+department VARCHAR(20) NULL,
+contractor INT default '0' NOT NULL,
+salary DECIMAL(19,4) NULL,
+PRIMARY KEY (recid)
+);
+
+INSERT INTO staff (loginid, first_name, last_name, email, start_date, department, salary) VALUES
+('FERMEN','Enrico','Fermi', 'enrico@science.com', '2010-03-10', 'Development', 24348.00),
+('ZUSEKO','Konrad','Zuse', 'konrad@science.com', '2006-11-09', 'Development', 25837.40),
+('BORNMA','Max','Born', 'maxborn@science.com', '1999-08-25', 'Development', 28384.20),
+('LEEXHA','Harper', 'Lee', 'harper@authors.com', '1999-03-04', 'Art', 15398.00),
+('SIMPHO','Homer', 'Simpson', 'homer@simpson.com', '2008-03-09', 'TV', 34938.50),
+('JOBSST','Steve', 'Jobs', 'steve@science.com', '2005-10-10', 'Development', 26387.00),
+('SIMPLI','Lisa', 'Simpson', 'lisa@simpson.com', '2004-09-27', 'TV', 35987.50),
+('HARRGE','George', 'Harrison', 'george@beatles.com', '1989-04-05', 'Music', 30989.50),
+('LENNJO','John', 'Lennon', 'john@beatles.com', '2000-10-02', 'Music', 29378.50),
+('BANKIA','Ian', 'Banks', 'ian@authors.com', '2002-03-09', 'Art', 16390.50),
+('MCCAPA','Paul', 'McCartney', 'paul@beatles.com', '2012-01-03', 'Music', 31839.50),
+('WALTRO','Roger', 'Walters', 'roger@pinkfloyd.com', '2003-10-02', 'Music', 31983.00),
+('MASONI','Nick', 'Mason', 'nick@monkees.com', '1998-02-10', 'Music', 29290.50),
+('JENNED','Edward','Jenner','edward@science.com', '2007-12-27', 'Development', 27387.00),
+('FORSEM','E.M.', 'Forster', 'edwardforster@authors.com', '1999-05-22', 'Art', 16398.50),
+('PULLPH','Phillip', 'Pullman', 'phillip@authors.com', '2001-03-04', 'Art', 17239.00),
+('PLANMA','Max','Planck', 'maxplanck@science.com', '2001-09-25', 'Development', 23938.50),
+('HORNNI','Nick', 'Hornby', 'nick@authors.com', '2002-02-04', 'Art', 18398.90),
+('BANKME','Melissa', 'Bank', 'melissa@authors.com', '2000-12-02', 'Art', 15290.00),
+('GILMDA','David', 'Gilmour', 'david@pinkfloyd.com', '2004-10-04', 'Music', 18398.00),
+('JORDRO','Robert', 'Jordan', 	'bob@authors.com', '2002-04-03', 'Art', 17398.00),
+('SIMPMA','Marge', 'Simpson', 'marge@simpson.com', '2000-10-03', 'TV', 36938.98),
+('RUTHER','Ernst','Rutherford',	'ernst@science.com', '1997-11-13', 'Development',  28298.00),
+('MCGUUR','Ursula', 'McGuin', 'ursula@authors.com', '2003-03-03', 'Art', 16009.50),
+('GREEGR','Graham', 'Greene', 'graham@authors.com', '2012-04-04', 'Art', 18398.90),
+('STARRI','Ringo', 'Starr', 'ringo@beatles.com', '1999-11-23', 'Music', 32908.60),
+('CORNWB','Bernard', 'Cornwell', 'bernard@authors.com', '1998-02-04', 'Art', 17390.00),
+('WYNDJO','John', 'Wyndham', 'john@authors.com', '2009-03-09', 'Art', 18290.00),
+('BABBCH','Charles','Babbage', 'charles@science.com', '1988-06-20', 'Development', 24987.50),
+('BARRSY','Syd', 'Barrett', 'syd@pinkfloyd.com ', '2004-04-20', 'Music', 31398.00),
+('ELIOTS','T.S.', 'Eliot', 'thomas@authors.com', '2000-01-06', 'Art', 16398.00),
+('SIMPBA','Bart', 'Simpson', 'bart@simpson.com', '2001-09-03', 'TV', 32989.90),
+('FARAMI','Michael', 'Faraday','michael@science.com', '2005-12-22', 'Development', 24389.00),
+('SIMPMA','Maggie', 'Simpson', 'maggie@simpson.com', '2005-04-08', 'TV', 36343.00),
+('SIMPAB','Abe', 'Simpson', 'abe@simpson.com', '1986-03-09', 'TV', 37983.00);
+
+
+
+

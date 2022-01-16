@@ -1,0 +1,49 @@
+
+Car Selector Web Pages
+======================
+
+PART 1
+
+Write a PHP program for car selector.
+
+The program should consist of an html page with the form and a php handler page which does the processing.
+
+
+html page
+---------
+
+Create an html page called cars.html making sure that it is a valid xhtml page and has a title in the <title> tag.
+
+The form should consist of : 
+
+(1) A set of radio buttons with three options of 'BMW', 'VW' and 'Ford'
+
+(2) A drop down list of available colours.
+
+(3) A text box which can accept the age of the customer.
+
+(4) A check box to identify if the customer wants a new or used car.
+
+All the data should be in the form of an array so, for example the available colours would have an a array of :
+
+$arrColours = {'1' => 'Red', '2' => 'Green', '3' => 'Blue', '4' => 'Plum', '5' => 'Purple', '6' => White, '7' => 'Yellow'};
+
+Writing all the data in as arrays mean that the application could be changed when the data is extracted 
+from a database data source.
+
+Create the drop down lists and radio button lists using foreach loops.
+
+
+
+php handler page
+----------------
+
+Store each of the results into an array of session variables and display the session variables on the 
+php handler page.  The session variables will allow you to return to the html page and enter in 
+another selection.
+
+Validate the age of the customer as an integer value and that the customers age is at least 17.
+
+
+
+ 

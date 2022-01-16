@@ -1,0 +1,14 @@
+
+Flow and loop exercies
+----------------------
+
+
+(1)  Use an if statement to print the string "youth message" to the browser if an integer variable $age is between 18 and 35.  I $age is any other value then the string "Generic Message" should be printed to the browser.
+
+(2) Extend the code to print the string "Child Message" if the $age is between 1 and 17.
+
+(3) Create a while statement that prints every odd number between 1 and 49
+
+(4) Convert the while statement of (3) to a for statement
+
+

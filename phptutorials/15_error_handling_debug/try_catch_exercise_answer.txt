@@ -1,0 +1,47 @@
+
+//Exercise in try catch  
+
+
+
+
+<?php
+
+$iDivider = $_GET['divider'];
+ 
+// If divider is 0, don't continue.
+ 
+if ($iDivider == 0) {
+    echo "Sorry, number cannot be 0.";
+} else {
+    echo "Total: " . (5/$iDivider);
+}
+
+?>
+
+
+
+The exact functionality above can be replicated using the try…catch exception:
+
+
+<?php
+	
+$iDivider = $_GET['divider'];
+ 
+// If divider is 0, don't continue.
+ 
+try {
+ 
+    if ($iDivider == 0) {
+        throw new Exception("Sorry, number cannot be 0.");
+    }
+    echo "Total: " . (5/$iDivider);
+ 
+} catch (Exception $e) {
+ 
+    echo $e->getMessage();
+ 
+}
+
+?>
+
+

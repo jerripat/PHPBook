@@ -1,0 +1,77 @@
+ <!DOCTYPE HTML>
+ <html>
+ <head>
+   <meta charset="utf-8">
+   <title>jQuery demo</title>
+   <script src="js/jquery.js" type="text/javascript"></script>
+ </head>
+ <body>
+
+   <script text="text/javascript">
+   $(document).ready(function() {
+   
+   	$('#fuelcost').submit(function() {
+
+		var miles, mpg, cost, validate, costpergallon, costpermile, total, message;
+
+		validate = true;
+		message = '';
+
+		if ($('#miles').val() > 0) {
+		   miles = $('#miles').val();
+		}
+		else
+		{		  
+		    message = 'Enter miles\r\n';
+		    validate = false;
+		}
+
+
+		if ($('#mpg').val() > 0) {
+		  mpg = $('#mpg').val();
+		}
+		else
+		{		   
+		    message += 'Enter mpg';
+		    validate = false;
+		}
+
+
+		if ($('#cost').val() > 0) {
+		   cost = $('#cost').val();
+		}
+		else
+		{
+		    cost = '140.9';		   
+		}
+
+
+		if (validate == true)
+		{
+		    costpergallon = (cost * 4.5460951) / 100;
+		    costpermile = costpergallon / mpg;
+		    total = (miles * costpermile);
+
+ 		    alert(total);
+		    return false;		   
+		}
+		else
+		{		    
+		    alert(message);
+		    return false;
+		}
+
+   	});
+
+   });
+   </script>
+
+<form action="calculator.php" method="post" id="fuelcost">
+<p>Miles: <input type="text" name="miles" size="5" maxlength="10" id="miles" /></p>
+<p>MPG: <input type="text" name="mpg" size="5" maxlength="10" id="mpg" /></p>
+<p>Pence / Litre - Optional (140.9p): <input type="text" name="cost" size="5" maxlength="10" id="cost" /></p>
+<p><input type="submit" name="submit" value="Calculate!" /></p>
+</form>
+
+</body>
+</html>

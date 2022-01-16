@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Printer caclulator</title>
+   <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+   
+<style type="text/css">
+
+body{
+	font-family:Arial, Verdana;	
+}
+
+fieldset {
+	width:400px;	
+}
+legend {
+	font-size:140%;	
+	font-weight:bold;	
+}
+
+label.field {
+	text-align:left;
+	width:150px;
+	float:left;
+	font-weight:bold;
+}
+
+input.textbox-300 {
+	width:300px;
+	float:left;
+}
+
+input.textbox-50 {
+	width:50px;
+	float:left;
+}
+
+fieldset p {
+	clear:both;
+	padding: 5px;	
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 18px 8px 18px;
+  text-decoration: none;
+  border:0px;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  border:0px;
+}
+
+#divtotal {
+	border:solid #000000 thin;
+	padding:5px 5px 5px 5px;
+	color:#E90B7A;
+}
+
+</style>   
+   
+</head>
+
+<body>
+
+   <script text="text/javascript">
+   	$(document).ready(function() {
+   
+   	$("#divtotal").hide();
+   
+   	$('#printingcost').submit(function() {
+
+		var papersize, numberofsides, numberofcopies, format, printinginks, papertype, turnaround, shipping, total, numberofpages;
+		var totalnumberofsheets;
+		var baseprice
+		var A4basepricebw, A3basepricebw, A4basepricecolour, A3basepricecolour
+			
+		A4basepricebw = 0.03;
+		A3basepricebw = 0.06;
+		A4basepricecolour = 0.07;
+		A3basepricecolour = 0.14;
+		
+		message = '';
+
+		numberofsides = $('#numberofsides').val();
+		numberofcopies = $('#numberofcopies').val();
+		format = $('#format').val();
+		printinginks = $('#printinginks').val();
+		papertype = $('#papertype').val();
+		turnaround = $('#turnaround').val();
+		shipping = $('#shipping').val();		
+		
+
+		if (printinginks == 'Colour')
+		{
+			if (papertype == 'A4')
+			{
+				baseprice = A4basepricecolour;
+			}
+			else
+			{
+				baseprice = A3basepricecolour
+			}
+		}
+		else
+		{
+			if (papertype == 'A4')
+			{
+				baseprice = A4basepricebw;
+			}
+			else
+			{
+				baseprice = A3basepricebw;
+			}
+		}
+
+		if (format == 'single')
+		{
+			totalnumberofsheets = numberofsides * numberofcopies;
+		}
+		else
+		{
+			totalnumberofsheets = numberofsides * numberofcopies / 2;
+		}			
+		
+		total = baseprice * totalnumberofsheets;
+
+		//Display the output in the div
+		$("#divtotal").show();
+		$('#divtotal').text("Total Cost: " +  total );
+
+	    return false;		
+
+   	});
+
+   });
+   </script>
+
+
+<fieldset>
+
+<legend>Calculate</legend>
+
+<form action="#" method="post" id="printingcost">
+
+<p>
+<label for="papersize" class="field">Paper Size:</label>
+<select name="pagepersize" id="papersize">
+	<option value="A4" selected="selected">A4</option>
+    <option value="A3">A3</option>
+</select>
+</p>
+
+<p>
+<label for="numberofsides" class="field">Number of sides:</label>
+<input type="text" name="numberofsides" id="numberofsides" style="width:40px;" />
+</p>
+
+<p>
+<label for="numberofcopies" class="field">Number of copies:</label>
+<input type="text" name="numberofcopies" id="numberofcopies" style="width:40px;" /></p>
+
+<p>
+<label for="format" class="field">Format:</label>
+<select name="format" id="format">
+    <option value="Single" selected="selected">Single</option>
+	<option value="Double">Double</option>
+</select>
+</p>
+
+<p>
+<label for="printinginks" class="field">Printing Inks:</label>
+<select name="printinginks" id="printinginks">
+    <option value="Black and White" selected="selected">Black and White</option>
+	<option value="Colour">Colour</option>
+</select>
+</p>
+
+<p>
+<label for="papertype" class="field">Paper Type:</label>
+<select name="papertype" id="papertype">
+	<option value="90gms" selected="selected">90gms</option>
+    <option value="110gms">110gms</option>
+	<option value="130gms">130gms</option>    
+</select>
+</p>
+
+<p>
+<label for="turnaround" class="field">Turn around:</label>
+<select name="turnaround" id="turnaround">
+    <option value="standard" selected="selected">Standard</option>
+   	<option value="1day">1 day</option>
+</select>
+</p>
+
+<p>
+<label for="shipping" class="field">Shipping:</label>
+<select name="shipping" id="shipping">
+    <option value="secondclass" selected="selected">Second Class</option>    
+	<option value="firstclass">First Class</option>
+</select>
+</p>
+
+<p>
+<div id="divtotal">&nbsp;</div>
+</p>
+
+<p><input type="submit" name="submit" value="Calculate" id="submit" class="btn" /></p>
+
+</form>
+
+</fieldset>
+
+
+</body>
+</html>

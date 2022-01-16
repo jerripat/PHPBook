@@ -1,0 +1,10 @@
+Some array exercies
+-------------------
+
+
+(1) Create an associative array of some EU countries and display those countries in a drop down list using a foreach loop.  So uk is United Kingdom, fr is France and so on.
+
+(2) Create an assoicative array of some html colour names with the name and its equivalent hexidecimal value and display them as a set of radio buttons using a foreach loop.  e.g. $colours = {'red' => '#ff0000', 'green' => '#00ff00'};
+
+
+

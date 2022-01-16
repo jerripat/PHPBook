@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset=”UTF-8" />
+  <script src="js/jquery.js"></script>
+</head>
+<body>
+
+<script language="javascript" type="text/javascript">
+$(document).ready(function () {
+    $("#options").change(function () {
+         $("#options option:selected").each(function ()
+		{
+			
+         	if($(this).attr("id") == "TEXTAREA")
+			{
+				$("#divtextarea").show();
+				$("#divtextbox").hide();
+				$("#divcheckbox").hide();
+				$("#divdropdown").hide();		
+			   	$('.member').show();			
+			}
+			
+         	if($(this).attr("id") == "TEXTBOX")
+			{
+				$("#divtextbox").show();
+				$("#divtextarea").hide();
+				$("#divcheckbox").hide();				
+				$("#divdropdown").hide();		
+			   	$('.member').show();													
+			}			
+
+       		if($(this).attr("id") == "CHECKBOX")
+			{
+				$("#divtextbox").hide();
+				$("#divtextarea").hide();				
+				$("#divcheckbox").show();				
+				$("#divdropdown").hide();
+				$('.member').hide();													
+			}			
+
+       		if($(this).attr("id") == "DROPDOWN")
+			{
+				$("#divtextbox").hide();
+				$("#divtextarea").hide();				
+				$("#divcheckbox").hide();				
+				$("#divdropdown").show();
+				$('.member').hide();													
+			}			
+			
+			if($(this).attr("id") == "SELECT")
+			{
+				$("#divtextarea").hide();
+				$("#divtextbox").hide();
+				$("#divcheckbox").hide();				
+				$("#divdropdown").hide();
+				$('.member').hide();									
+			}			
+			
+        });
+    }).change();
+});
+</script>
+
+<select name="options" id="options" class="OptionsStyle">
+	<option value="SELECT" id="SELECT">SELECT</option>
+	<option value="TEXTBOX" id="TEXTBOX">TEXTBOX</option>
+	<option value="TEXTAREA" id="TEXTAREA">TEXTAREA</option>
+	<option value="CHECKBOX" id="CHECKBOX">CHECKBOX</option>
+	<option value="DROPDOWN" id="DROPDOWN">DROPDOWN</option>
+</select>
+ 
+<div id="divtextarea">textarea</div>
+<div id="divtextbox">textbox</div>
+<div id="divcheckbox">checkbox</div>
+<div id="divdropdown">dropdown</div>
+
+
+<table>
+<tr class="member">
+	<td>line 1 table row</td>
+</tr>   
+<tr class="member">
+	<td>line 2 table row</td>
+</tr>
+</table>    
+
+</body>
+</html>

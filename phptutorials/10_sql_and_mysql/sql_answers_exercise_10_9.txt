@@ -1,0 +1,11 @@
+Exercise 10.9
+
+
+Display a list of courses against departments ordered by the department name
+
+SELECT Course.title as coursetitle, Department.name as departmentname 
+FROM Course INNER JOIN Department ON 
+Course.departmentid = Department.departmentid ORDER BY Department.name
+
+
+

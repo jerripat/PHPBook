@@ -1,0 +1,13 @@
+Exercise 10.11
+
+Display the count of the number of students in each courseid using a GROUP BY clause.
+
+To do this, create a SQL statement using an INNER JOIN using the person and studentgrade tables.
+
+Then modify the query by adding in the GROUP BY courseid.
+
+To work out the number of persons, use the COUNT keyword.
+
+ 
+SELECT count(Person.lastname), StudentGrade.courseid FROM Person INNER JOIN StudentGrade ON Person.personid = StudentGrade.studentid GROUP BY StudentGrade.courseid
+
