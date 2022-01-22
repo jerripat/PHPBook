@@ -1,0 +1,97 @@
+        html {
+            font-size: 100%;
+        }
+        title{
+            color:darkgreen;
+        }
+        h1,h2{
+            color:rgb(212, 203, 68);
+        }
+        body {
+            background-color:  #9695a1;
+            text-align: center;
+        }
+        ul{
+                     align-items:left;
+                    }
+        .square {
+            background: #3254a8;
+            width: 25rem;
+            aspect-ratio: 2/1;
+            border: solid black;
+            box-shadow: 15px 15px 10px rgba(60, 56, 140, 1);
+            display: block;
+            margin-top: 2rem;
+            margin-left: 10rem;
+        }
+
+        form {
+            display: block;
+            height: 18rem;
+            width: auto;
+            margin-top: 2rem;
+            align-items:center;
+        }
+
+        .button1 {
+            box-shadow: 0 10px 16px 0 rgba(3, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button1:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #textBox {
+            width: 15rem;
+            height: auto;
+            margin-left: 5rem;
+            text-align:center;
+        }
+
+        #textBox2 {
+            width: 15rem;
+            height: auto;
+            margin-left: 0rem;
+            text-align:center;
+        }
+         #textBox3 {
+            width: 15rem;
+            height: auto;
+            margin-left: 0rem;
+            text-align:center;
+        }
+
+        #coloration {
+            color: #e0e640;
+        }
+
+        #coloration2 {
+            color: #e0e640;
+        }
+        #moveTitle{
+            margin-top: 5px;
+            
+        }
+        .container {
+              display:display-box;
+              flex-wrap: wrap;
+              flex-direction: row;
+              justify-content: center;
+              align-items: auto;
+              align-content: start
+            }
+            .container:after {
+              display: block;
+              content: placeholder;
+              margin: 10px;
+              flex: 999 999 auto;
+            }
+            .item {
+              justify-content:center;
+              margin: 10px;
+            }
+            .btn{
+                margin-top:1rem;
+               padding:10px;
+            }
+       
