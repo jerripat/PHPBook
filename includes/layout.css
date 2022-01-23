@@ -1,0 +1,26 @@
+body{
+    font: 100% Verdana, Arial, Helvetica, sans-serif;
+    background: #a9ced9;
+    margin:10;
+    padding:10;
+    text-align: center;
+    color: #000000
+}
+.oneCol #container{
+    box-shadow: 15px 15px 10px rgba(60, 56, 140, 1);
+    width: 52em;
+    background: #a69281;
+    margin: 2 auto;
+    border: 1px solid #000000;
+    
+}
+.oneCol #mainContent{
+    padding: 0 20px;
+}
+h2{
+    color:#a9ced9;
+}
+.moveup{
+    margin-bottom: 2rem;
+    padding:10rem;
+}

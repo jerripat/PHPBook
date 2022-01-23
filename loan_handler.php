@@ -43,52 +43,22 @@
             $employment = isset($_POST['employment']);
             $age = isset($_POST['age']);
           
-             if  (isset($_POST['fullname'])) 
-             {
-                       $name = stripslashes($_POST['fullname']);
-             }
-             else
-             {
-                 echo('<p>Please enter your name</p>');
-                       $name = null;
-             }
-                           
-             if  (isset($_POST['emailaddress']))
-             {
-                       $email = stripslashes($_POST['emailaddress']);
-             }
-             else
-             {
-                 echo('<p id="email">Please enter your email</p>');
-                       $email =null;
-             }
-            
+          
             if  (isset($_POST['employment'])) 
             {
-                           
-                       $employment = stripslashes($_POST['employment']);
+                    $employment = stripslashes($_POST['employment']);
             }
             else
             {
-                echo('<p id="employed">Please enter your Employer</p>');
-                       $employment = null;
+                echo('<p >Please enter your Employer</p>');
+                $employment = null;
             }
-                      
-            if  (isset($_POST['age']))
-            {
-                       $age = stripslashes($_POST['age']);
-            }
-            else 
-            {
-                echo('<p>Please enter your age</p>');
-                       $age = null;
-            }
-                                   
+                           
             echo "<p>Thank you, <b>$name</b>, for tour enquery</p>
             <p>We will reply to you at your email address: <strong>$email</strong>.</p>";
             echo("<p>You are $employment $age years old</p>");       
  ?>
-        </form>
+           </form>
        </main>
     </body>
 </html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title><?php echo($pagetitle); ?></title>
+        <link rel="stylesheet" href="includes/layout.css" type="text/css" media="screen" />
+    </head>
+    <body class="oneCol">
+        <div id="container">
+            <div id="mainContent">
+                
