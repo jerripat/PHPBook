@@ -79,7 +79,8 @@
               flex-direction: row;
               justify-content: center;
               align-items: auto;
-              align-content: start
+              align-content:start;
+              
             }
             .container:after {
               display: block;
