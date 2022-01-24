@@ -20,6 +20,12 @@
         margin:10px;
               
     }
+    body{
+        background-color:rgb(112, 91, 187)
+    }
+    h1,h2,p{
+        color:rgb(240, 230, 100)
+    }
     /* .item-1{
         background-color:#ff0037;
         color:#fff;

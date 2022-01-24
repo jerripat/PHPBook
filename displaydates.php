@@ -1,10 +1,16 @@
-<h1> Chapter 4 functions - date and time </h1
+<h1><center> Chapter 4 functions - date and time</center> </h1>
 <?php
 
 $mon = array(1 => "Jan", 2 => "Feb", 3 => "Mar", 4 => "Apr",
 5 => "May", 6 => "Jun", 7 => "Jul", 8 => "Aug", 9 => "Sep",
 10 => "Oct", 11 => "Nov", 12 => "Dec",);
 
+?>
+<style>
+ <?php include("includes/CSS/styles-flexbox.css"); ?>
+</style>
+
+<?php
 $currentdate = getDate();
 $month =$currentdate["mon"];
 $day = $currentdate["mday"];
@@ -46,11 +52,9 @@ $year = $currentdate["year"];
                      }
             ?>
             </select>
+            
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -58,12 +62,14 @@ $year = $currentdate["year"];
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="CSS/styles-flexbox.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+     <div class="container">
+    <div class="items-1 item">1</div>
+    <div class="items-2 item">2</div>
+    <div class="items-3 item">3</div>
+</div>
         
         <script src="" async defer></script>
     </body>
