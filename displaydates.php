@@ -7,8 +7,10 @@ $mon = array(1 => "Jan", 2 => "Feb", 3 => "Mar", 4 => "Apr",
 
 $currentdate = getDate();
 $month =$currentdate["mon"];
-$day = $currentdate["year"];
+$day = $currentdate["mday"];
+$year = $currentdate["year"];
 ?>
+<br/>
  <strong>Month</strong><br/>
     <select name="month">
         <?php
@@ -36,7 +38,7 @@ $day = $currentdate["year"];
      <strong>Year</strong><br/>
      <select name="year">
      <?php
-            for ($y = 2010; $y <=2020; $y++)
+            for ($y = 2010; $y <=2023; $y++)
             {
                 ?>
                     <option value="<?php echo($y); ?>" <?php if ($year == $y) {echo"selected"; } ?> ><?php echo($y); ?></option>
@@ -44,3 +46,25 @@ $day = $currentdate["year"];
                      }
             ?>
             </select>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>
