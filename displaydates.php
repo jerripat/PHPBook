@@ -1,4 +1,9 @@
+
+</div>
+<div class="square">
 <h1><center> Chapter 4 functions - date and time</center> </h1>
+
+</div>
 <?php
 
 $mon = array(1 => "Jan", 2 => "Feb", 3 => "Mar", 4 => "Apr",
@@ -8,6 +13,7 @@ $mon = array(1 => "Jan", 2 => "Feb", 3 => "Mar", 4 => "Apr",
 ?>
 <style>
  <?php include("includes/CSS/styles-flexbox.css"); ?>
+ <?php include("includes/CSS/styles.css"); ?>
 </style>
 
 <?php
@@ -16,19 +22,54 @@ $month =$currentdate["mon"];
 $day = $currentdate["mday"];
 $year = $currentdate["year"];
 ?>
-<br/>
- <strong>Month</strong><br/>
+
+            
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <!DOCTYPE html>
+         <script>
+let myWindow;
+function closeWin() {
+  myWindow.close();
+ }
+</script>
+<html>
+<body>
+ <button class="btn btn-primary" type="button" onclick="closeWin()">Close</button>
+
+    
+ 
+
+</body>
+</html>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/styles-flexbox.css">
+    </head>
+    <body>
+        
+     <div class="container">
+    <div class="items-1 item">
+      <strong>Month</strong>
     <select name="month">
         <?php
   for ($m = 1; $m <= 12; $m++){
       ?>
-    <option value="<?php echo($m); ?> " <?php if ($month == $m) {echo"selected";} ?> ><?php echo($mon[$m]); ?></option>
+            <option value="<?php echo($m); ?> " <?php if ($month == $m) {echo"selected";} ?> ><?php echo($mon[$m]); ?></option>
     <?php
       }
       ?>  
-</select>
-<br/><br/>
-<strong>Day</strong><br/>
+</select> 
+</div>
+    <div class="items-2 item">
+        <strong>Day</strong><br/>
 <select name="day">
     <?php
         for ($d = 1; $d <=31; $d++)
@@ -40,8 +81,9 @@ $year = $currentdate["year"];
         }
 ?>
 </select>
-     <br/><br/>
-     <strong>Year</strong><br/>
+</div>
+    <div class="items-3 item">
+         <strong>Year</strong><br/>
      <select name="year">
      <?php
             for ($y = 2010; $y <=2023; $y++)
@@ -52,25 +94,9 @@ $year = $currentdate["year"];
                      }
             ?>
             </select>
-            
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="CSS/styles-flexbox.css">
-    </head>
-    <body>
-     <div class="container">
-    <div class="items-1 item">1</div>
-    <div class="items-2 item">2</div>
-    <div class="items-3 item">3</div>
+        </div>
 </div>
-        
-        <script src="" async defer></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+       
     </body>
 </html>

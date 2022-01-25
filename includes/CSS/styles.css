@@ -4,8 +4,8 @@
         title{
             color:darkgreen;
         }
-        h1,h2{
-            color:rgb(212, 203, 68);
+        h2{
+            color:rgb(253, 239, 33);
         }
         body {
             background-color:  #9695a1;
@@ -16,13 +16,15 @@
                     }
         .square {
             background: #3254a8;
-            width: 25rem;
+            width: 35rem;
+            height: 5rem;
             aspect-ratio: 2/1;
             border: solid black;
             box-shadow: 15px 15px 10px rgba(60, 56, 140, 1);
-            display: block;
+           display:inline-flexbox;
             margin-top: 2rem;
-            margin-left: 10rem;
+            margin-left: 6rem;
+            
         }
 
         form {
