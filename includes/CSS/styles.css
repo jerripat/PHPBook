@@ -84,16 +84,7 @@
               align-content:start;
               
             } */
-            .container:after {
-              display: block;
-              content: placeholder;
-              margin: 10px;
-              flex: 999 999 auto;
-            }
-            .item {
-              justify-content:center;
-              margin: 10px;
-            }
+          
             .btn{
                 margin-top:1rem;
                padding:10px;
