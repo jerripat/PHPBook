@@ -17,7 +17,7 @@
         .square {
             background: #3254a8;
             width: 35rem;
-            height: 5rem;
+            height: 15rem;
             aspect-ratio: 2/1;
             border: solid black;
             box-shadow: 15px 15px 10px rgba(60, 56, 140, 1);
@@ -75,7 +75,7 @@
             
             
         }
-        .container {
+        /* .container {
               display:display-box;
               flex-wrap: wrap;
               flex-direction: row;
@@ -83,7 +83,7 @@
               align-items: auto;
               align-content:start;
               
-            }
+            } */
             .container:after {
               display: block;
               content: placeholder;
