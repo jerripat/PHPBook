@@ -1,8 +1,9 @@
 
-</div>
 <div class="square">
-<h1><center> Chapter 4 functions - date and time</center> </h1>
-
+    <br/><br/>
+    <div style="padding:20px">
+    <h2><center> Chapter 6 functions <br.> Date and Time</center> </h2>
+</div>
 </div>
 <?php
 
@@ -26,19 +27,6 @@ $year = $currentdate["year"];
 <!DOCTYPE html>
 <html>
     <head>
-      
- <script>
-let myWindow;
-function closeWin() {
-  myWindow.close();
- }
-</script>
-
-<body>
- 
-</body>
-</html>
-
         <meta charset="utf-8">
         <title>Calculations</title>
         <meta name="description" content="">
@@ -46,8 +34,10 @@ function closeWin() {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="CSS/styles-flexbox.css">
     </head>
-    <body>
-        
+    <title> Calculate Tax</title>
+    </head>
+<body>
+    <form>     
      <div class="container">
     <div class="items-1 item">
       <strong>Month</strong>
@@ -85,13 +75,15 @@ function closeWin() {
                     <option value="<?php echo($y); ?>" <?php if ($year == $y) {echo"selected"; } ?> ><?php echo($y); ?></option>
                     <?php
                      }
-            ?>
+      ?>
            
-            </select>
-            
-        </div>
+     </select>
+      </div>
+                    </form>
          <button class="btn btn-primary button1" type="button" onclick="open(location, '_self').close();">Close</button>
-</div>
+        
+         <button class="btn btn-primary button1" type="button" onclick="submit">Submit</button>
+        </div>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
        
     </body>
